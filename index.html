@@ -9,13 +9,17 @@
     function checkPrime(n) {
         let check = true;
         for (let i = 2; i <= Math.sqrt(n); i++) {
-            while(i<10000){
-                if(n % i == 0);
+            if(n % i == 0) {
                 check= false;
                 break;
             }
         }
         return check;
+    }
+    for(i = 2; i < 10000; i++){
+        if(checkPrime(i) == true){
+            document.writeln(i);
+        }
     }
 </script>
 </body>
